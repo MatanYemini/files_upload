@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Dropzone from '../dropzone/Dropzone';
 import './Upload.css';
 import Progress from '../progress/Progress';
+import { useAlert } from 'react-alert';
 
 class Upload extends Component {
   constructor(props) {
@@ -75,7 +76,10 @@ class Upload extends Component {
 
       try {
         const currentPage = this.props.page;
-        req.open('POST', `http://localhost:8000/upload/${currentPage}`);
+        req.open(
+          'POST',
+          `http://localhost:8000/api/files/upload/${currentPage}`
+        );
         req.send(formData);
       } catch (error) {
         console.log(error.message); // Can be replaced by alert
@@ -92,7 +96,7 @@ class Upload extends Component {
           <img
             className='CheckIcon'
             alt='done'
-            src='baseline-check_circle_outline-24px.svg'
+            src='wink.gif'
             style={{
               opacity:
                 uploadProgress && uploadProgress.state === 'done' ? 0.5 : 0
@@ -117,7 +121,7 @@ class Upload extends Component {
     } else {
       return (
         <button
-          disabled={this.state.files.length < 0 || this.state.uploading}
+          disabled={this.state.files.length <= 0 || this.state.uploading}
           onClick={this.uploadFiles}
         >
           Upload

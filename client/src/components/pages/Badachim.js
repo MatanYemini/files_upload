@@ -3,7 +3,7 @@ import Upload from '../upload/Upload';
 import { BADACHIM_PATH } from '../../utils/types';
 import './Pages.css';
 
-const Badachim = props => {
+const Badachim = () => {
   return (
     <div className='Page'>
       <div className='Card'>

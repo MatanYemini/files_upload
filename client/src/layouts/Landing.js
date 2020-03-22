@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // Add check if path exits using hooks
 import { Link } from 'react-router-dom';
 
 const Landing = props => {

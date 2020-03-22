@@ -21,7 +21,12 @@
   "homepage": "https://github.com/MatanYemini/files_upload#readme",
   "dependencies": {
     "config": "^3.3.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "prop-types": "^15.7.2",
+    "react-alert": "^7.0.0",
+    "react-alert-template-basic": "^1.0.0",
+    "react-transition-group": "^4.3.0",
     "request": "^2.88.2"
   },
   "devDependencies": {

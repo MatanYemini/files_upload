@@ -3,7 +3,7 @@ import Upload from '../upload/Upload';
 import { UTILS_PATH } from '../../utils/types';
 import './Pages.css';
 
-const Utils = props => {
+const Utils = () => {
   return (
     <div className='Page'>
       <div className='Card'>
