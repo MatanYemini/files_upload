@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
 import Upload from '../upload/Upload';
 import { UTILS_PATH } from '../../utils/types';
+import './Pages.css';
 
-const Badachim = props => {
+const Utils = props => {
   return (
-    <div className='App'>
+    <div className='Page'>
       <div className='Card'>
         <Upload page={UTILS_PATH} />
       </div>
@@ -12,4 +13,4 @@ const Badachim = props => {
   );
 };
 
-export default Badachim;
+export default Utils;
