@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Dropzone from '../dropzone/Dropzone';
 import './Upload.css';
 import Progress from '../progress/Progress';
-import { useAlert } from 'react-alert';
+import { withAlert } from 'react-alert';
+import { checkPathes } from '../../utils/Alert';
 
 class Upload extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class Upload extends Component {
   }
 
   onFilesAdded(files) {
+    this.props.alert.success('Files Added');
     this.setState(prevState => ({
       files: prevState.files.concat(files)
     }));
@@ -38,7 +40,8 @@ class Upload extends Component {
       this.setState({ successfullUploaded: true, uploading: false });
     } catch (e) {
       // Not Production ready! Do some error handling here instead...
-      this.setState({ successfullUploaded: true, uploading: false });
+      this.props.alert.error('Failed to Upload -> check folders');
+      this.setState({ successfullUploaded: false, uploading: false });
     }
   }
 
@@ -158,4 +161,4 @@ class Upload extends Component {
   }
 }
 
-export default Upload;
+export default withAlert()(Upload);
