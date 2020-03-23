@@ -9,3 +9,4 @@ Usage :
 ## Includes:
 * Server - using Node (file handling using formidable)
 * React
+* DropZone
