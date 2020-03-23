@@ -1,0 +1,38 @@
+{
+  "name": "files_upload",
+  "version": "1.0.0",
+  "description": "Files Uploader",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatanYemini/files_upload.git"
+  },
+  "author": "Matan Yemini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatanYemini/files_upload/issues"
+  },
+  "homepage": "https://github.com/MatanYemini/files_upload#readme",
+  "dependencies": {
+    "config": "^3.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "multer": "^1.4.2",
+    "prop-types": "^15.7.2",
+    "react-alert": "^7.0.0",
+    "react-alert-template-basic": "^1.0.0",
+    "react-transition-group": "^4.3.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
+}
