@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/MatanYemini/files_upload#readme",
   "dependencies": {
-    "config": "^3.3.0",
+    "config": "^3.3.8",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "formidable": "^1.2.2",
